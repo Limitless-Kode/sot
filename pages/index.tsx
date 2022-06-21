@@ -38,6 +38,7 @@ const Home: NextPage = () => {
 							as Reading and Writing, Debate and Public Speaking, Talent and Leadership Development, and
 							Information Technology." />
 				<meta property="og:image" content="https://www.sotgh.org/assets/images/hero.jpg" />
+				<meta property="og:image:type" content="image/jpeg" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
