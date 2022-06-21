@@ -37,6 +37,7 @@ const Home: NextPage = () => {
 							Development, Advocacy and Opportunity Creation. It focuses on the tuition of activities such
 							as Reading and Writing, Debate and Public Speaking, Talent and Leadership Development, and
 							Information Technology." />
+				<meta property="og:image" content="https://www.sotgh.org/assets/images/hero.jpg" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
