@@ -44,7 +44,7 @@ const ContactUs : NextPage = () => {
             isLoading: false,
             autoClose: 3000,
           });
-        formRef?.current.reset();
+        formRef.current?.reset();
       }, (error) => {
           toast.update(id, {
             render: 'Something wrong happened. Please try again.',
