@@ -32,27 +32,29 @@ const ContactUs : NextPage = () => {
   });
 
 
-  const sendEmail = () => {
+  const sendEmail = (formValues: any) => {
+    // return console.log(formValues)
     setFormDisabled(true);
     const id = toast.loading('Sending Message');
 
-    emailjs.sendForm('service_2ssz86k', 'template_d1rvez8', `${formRef.current}`, 'user_2RR2joOVprhH8K4kCh16P')
-      .then((result) => {
-          toast.update(id, {
+  emailjs.send('service_2ssz86k', 'template_d1rvez8', formValues, 'user_2RR2joOVprhH8K4kCh16P')
+    .then(function(response) {
+       toast.update(id, {
             render: 'Message has been sent successfully.',
             type: 'success',
             isLoading: false,
             autoClose: 3000,
-          });
-        formRef.current?.reset();
-      }, (error) => {
-          toast.update(id, {
+       });
+      formRef.current?.reset();
+    }, function(error) {
+       toast.update(id, {
             render: 'Something wrong happened. Please try again.',
             type: 'error',
             isLoading: false,
             autoClose: 3000,
           });
-      });
+    });
+
       setFormDisabled(false);
   };
   return (
