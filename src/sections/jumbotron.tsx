@@ -1,7 +1,6 @@
 import React from 'react'
 import { Button, Text } from '@mantine/core';
 import Circle from '../components/circle';
-import Image from 'next/image';
 import Link from 'next/link';
 
 function Jumbotron() {
