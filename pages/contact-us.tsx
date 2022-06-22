@@ -33,29 +33,29 @@ const ContactUs : NextPage = () => {
 
 
   const sendEmail = (formValues: any) => {
-    // return console.log(formValues)
+
     setFormDisabled(true);
     const id = toast.loading('Sending Message');
 
   emailjs.send('service_2ssz86k', 'template_d1rvez8', formValues, 'user_2RR2joOVprhH8K4kCh16P')
     .then(function(response) {
        toast.update(id, {
-            render: 'Message has been sent successfully.',
-            type: 'success',
-            isLoading: false,
-            autoClose: 3000,
+          render: 'Message has been sent successfully.',
+          type: 'success',
+          isLoading: false,
+          autoClose: 3000,
        });
       formRef.current?.reset();
     }, function(error) {
        toast.update(id, {
-            render: 'Something wrong happened. Please try again.',
-            type: 'error',
-            isLoading: false,
-            autoClose: 3000,
-          });
+          render: 'Something wrong happened. Please try again.',
+          type: 'error',
+          isLoading: false,
+          autoClose: 3000,
+        });
     });
 
-      setFormDisabled(false);
+    setFormDisabled(false);
   };
   return (
     <div>
@@ -96,15 +96,15 @@ const ContactUs : NextPage = () => {
             <TextInput name='phone' icon={<FiPhone />} placeholder="Phone Number" styles={{input: {fontSize: 16}, error: {fontSize:14, marginLeft: 25}}} radius="xl" size="xl" {...form.getInputProps('phone')}/>
           </div>
             <Textarea
-            name='message'
-            placeholder="Your Message"
-            autosize 
-            minRows={6} 
-            maxRows={8} 
-            styles={{input: {fontSize: 16}}}
-            size="xl" 
-            radius="lg" 
-            {...form.getInputProps('message')}
+              name='message'
+              placeholder="Your Message"
+              autosize 
+              minRows={6} 
+              maxRows={8} 
+              styles={{input: {fontSize: 16}, error: {fontSize:14, marginLeft: 25}}}
+              size="xl" 
+              radius="lg" 
+              {...form.getInputProps('message')}
             />
           <div className="flex justify-end my-8">
             <Button disabled={formDisabled} type="submit" radius="xl" size="xl" className='bg-secondary text-sm uppercase hover:bg-secondary'>
