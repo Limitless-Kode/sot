@@ -36,7 +36,7 @@ const ContactUs : NextPage = () => {
     setFormDisabled(true);
     const id = toast.loading('Sending Message');
 
-    emailjs.sendForm('service_2ssz86k', 'template_d1rvez8', formRef.current, 'user_2RR2joOVprhH8K4kCh16P')
+    emailjs.sendForm('service_2ssz86k', 'template_d1rvez8', `${formRef.current}`, 'user_2RR2joOVprhH8K4kCh16P')
       .then((result) => {
           toast.update(id, {
             render: 'Message has been sent successfully.',
