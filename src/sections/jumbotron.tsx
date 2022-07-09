@@ -6,7 +6,7 @@ import Link from 'next/link';
 function Jumbotron() {
   return (
     <div className="relative w-[100vw] h-[100vh] bg-gradient-to-r from-primary to-secondary flex justify-center items-center">
-      {/* <div className='absolute w-full h-full bg-gradient-to-r from-primary to-secondary' /> */}
+
       <Circle className="absolute w-[40vw] h-[40vw] rounded-full left-[-20vw]" />
 
       <div className='w-[80vw] lg:w-[30vw] text-white z-[2]'>

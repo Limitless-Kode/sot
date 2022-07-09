@@ -54,7 +54,7 @@ const Gallery = (props: IGallery) => {
         <div className='w-full lg:w-[30vw] mb-12'>
           <h2 className="text-2xl lg:text-3xl font-semibold mb-3">Have a look at what we created.</h2>
           <Text className="text-sm lg:text-lg leading-5 font-normal">
-            These groups, companies and organizations have played a major role in our journey so far.
+            Experience the moments we experienced in our journey to change the world of the young Ghanaian child.
           </Text>
         </div>
         <div className='mb-16 w-full'>

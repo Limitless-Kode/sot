@@ -143,7 +143,7 @@ const Home: NextPage = () => {
 							</div>
 						</div>
 						<div className="lg:block hidden w-[40vw]" />
-						<div className="lg:block hidden absolute bg-hero-image bg-cover bg-center scale-x-[-1] w-[40vw] h-[80vh] rounded-tr-[245px] bottom-0 right-0" />
+						<div style={{backgroundImage: `url('/assets/images/gallery/7.jpg')`}} className="lg:block hidden absolute bg-cover bg-top scale-x-[-1] w-[40vw] h-[80vh] rounded-tr-[245px] bottom-0 right-0" />
 					</div>
 				</section>
 
@@ -230,11 +230,11 @@ const Home: NextPage = () => {
 				<section>
 					<div className="relative w-[100vw] h-full py-32 bg-gradient-to-b from-primary to-secondary flex justify-center items-center">
 						<div className="w-[80vw] lg:w-[30vw] overflow-hidden text-white z-[2]">
-							<h2 className="text-2xl lg:text-3xl font-semibold">Events</h2>
+							{/* <h2 className="text-2xl lg:text-3xl font-semibold">Events</h2>
 							<Text className="text-sm lg:text-lg leading-5">
 								These groups, companies and organizations have played a major role in our journey so
 								far.
-							</Text>
+							</Text> */}
 							<div className="mt-12 w-[80vw] lg:w-[30vw]">
 								<div>
 									<Swiper
@@ -253,7 +253,7 @@ const Home: NextPage = () => {
 									{events.map((event, index) => (
 										<SwiperSlide key={index}>
 											<div className="w-[80vw] lg:w-[30vw]">
-												<h3 className="text-lg lg:text-xl font-bold mb-3 uppercase">{event.title}</h3>
+												<h2 className="text-2xl lg:text-3xl font-bold mb-3 uppercase">{event.title}</h2>
 												<Text className="text-sm lg:text-lg">{event.description}</Text>
 											</div>
 										</SwiperSlide>
@@ -279,7 +279,7 @@ const Home: NextPage = () => {
 							</div>
 						</div>
 						<div className="lg:block hidden w-[40vw]" />
-						<div className="lg:block hidden absolute bg-hero-image bg-cover bg-center scale-x-[-1] w-[50vw] h-full bottom-0 right-0" />
+						<div style={{backgroundImage: `url('/assets/images/gallery/12.jpg')`}}  className="lg:block hidden absolute bg-cover bg-center scale-x-[-1] w-[50vw] h-full bottom-0 right-0" />
 					</div>
 				</section>
 
