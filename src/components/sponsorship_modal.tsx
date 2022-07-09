@@ -35,19 +35,19 @@ function SponsorshipModal(props: IContactUsModal) {
       centered
       opened={opened}
       onClose={() => onClose()}
-      size='35vw'
+      size='sm'
       withCloseButton={false}
       radius={15}
       padding={0}
     >
-        <div className='flex items-center justify-start w-[35vw] min-h-[40vh]'>
-          <div className='flex flex-col w-[35vw] h-[40vh]'>
-            <div className='p-12 bg-[#F58326] rounded-t-[15px]'>
-              <h3 className='text-2xl font-bold text-white'>Make a Bank Transfer</h3>
+        <div className='flex items-center justify-start w-full min-h-[30vh]'>
+          <div className='flex flex-col w-full h-[30vh]'>
+            <div className='p-8 bg-[#F58326] rounded-t-[15px]'>
+              <h3 className='text-xl md:text-2xl font-bold text-white'>Make a Bank Transfer</h3>
             </div>
-            <div className='flex gap-4 p-12'>
-              <div className="cursor-pointer bg-fidelity h-[100px] w-[100px] bg-cover" />
-              <div>
+            <div className='flex gap-4 p-6 md:p-8'>
+              <div className="cursor-pointer bg-fidelity h-[60px] w-[60px] md:h-[100px] md:w-[100px] bg-cover" />
+              <div className=''>
                 <p className='text-md'>Abraham Agoni</p>
                 <div className='flex gap-6 items-center justify-start text-[#F58326]'>
                   <p className='text-black'> { isCopied ? 'Copied!' : '1400191801415'}</p>

@@ -654,6 +654,22 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 20vh;
 }
 
+.h-\[50px\] {
+  height: 50px;
+}
+
+.h-\[0px\] {
+  height: 0px;
+}
+
+.h-\[70px\] {
+  height: 70px;
+}
+
+.h-\[40px\] {
+  height: 40px;
+}
+
 .min-h-\[70vh\] {
   min-height: 70vh;
 }
@@ -668,6 +684,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .min-h-\[40vh\] {
   min-height: 40vh;
+}
+
+.min-h-\[30vh\] {
+  min-height: 30vh;
 }
 
 .w-\[100vw\] {
@@ -708,6 +728,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-\[70vw\] {
   width: 70vw;
+}
+
+.w-\[50px\] {
+  width: 50px;
+}
+
+.w-\[70px\] {
+  width: 70px;
+}
+
+.w-\[40px\] {
+  width: 40px;
 }
 
 .scale-x-\[-1\] {
@@ -905,6 +937,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding: 2rem;
 }
 
+.p-6 {
+  padding: 1.5rem;
+}
+
 .py-16 {
   padding-top: 4rem;
   padding-bottom: 4rem;
@@ -1087,6 +1123,10 @@ a {
     height: 100%;
   }
 
+  .md\:h-\[100px\] {
+    height: 100px;
+  }
+
   .md\:w-\[20vw\] {
     width: 20vw;
   }
@@ -1099,6 +1139,14 @@ a {
     width: 30vw;
   }
 
+  .md\:w-\[35vw\] {
+    width: 35vw;
+  }
+
+  .md\:w-\[100px\] {
+    width: 100px;
+  }
+
   .md\:flex-row {
     flex-direction: row;
   }
@@ -1107,9 +1155,22 @@ a {
     justify-content: flex-end;
   }
 
+  .md\:p-12 {
+    padding: 3rem;
+  }
+
+  .md\:p-8 {
+    padding: 2rem;
+  }
+
   .md\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
+  }
+
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 
