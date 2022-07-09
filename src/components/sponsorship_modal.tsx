@@ -49,7 +49,7 @@ function SponsorshipModal(props: IContactUsModal) {
               <div className="cursor-pointer bg-fidelity h-[100px] w-[100px] bg-cover" />
               <div>
                 <p className='text-md'>Abraham Agoni</p>
-                <div className='flex gap-6 items-center justify-center text-[#F58326]'>
+                <div className='flex gap-6 items-center justify-start text-[#F58326]'>
                   <p className='text-black'> { isCopied ? 'Copied!' : '1400191801415'}</p>
                   {
                     isCopied ? <FiCheck size={18}/> :
