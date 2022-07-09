@@ -30,7 +30,7 @@ function Jumbotron() {
       {/* 0, 55, 156 */}
       <div style={{
         background: "linear-gradient(240deg, rgba(0,55,156, 0.9), rgba(86,204,242, 0.9)), url('/assets/images/hero.jpg') center center /cover"
-      }} className="absolute bg-cover bg-center scale-x-[-1] w-[100vw] h-[100vh] bottom-0 right-0 hidden lg:block"></div>
+      }} className="absolute bg-cover bg-center scale-x-[-1] w-[100vw] h-[100vh] bottom-0 right-0 lg:block"></div>
       {/* <div className="absolute bg-hero-image bg-cover bg-center scale-x-[-1] w-[40vw] h-[80vh] rounded-tr-[245px] bottom-0 right-0 hidden lg:block"></div> */}
       <SponsorshipModal opened={opened} onClose={() => setOpened(false)} />
     </div>
