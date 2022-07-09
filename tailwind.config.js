@@ -18,6 +18,7 @@ module.exports = {
       backgroundImage: {
         'hero-image': "url('/assets/images/hero.jpg')",
         'logo': "url('/assets/images/logo.png')",
+        'fidelity': "url('/assets/images/fidelity.png')",
         'about-image': "url('/assets/images/about.jpg')",
       }
     },

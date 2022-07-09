@@ -1,9 +1,11 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Button, Text } from '@mantine/core';
 import Circle from '../components/circle';
 import Link from 'next/link';
+import SponsorshipModal from '../components/sponsorship_modal';
 
 function Jumbotron() {
+  const [opened, setOpened] = useState(false);
   return (
     <div className="relative w-[100vw] h-[100vh] bg-gradient-to-r from-primary to-secondary flex justify-center items-center">
 
@@ -14,7 +16,7 @@ function Jumbotron() {
         <Text className='text-sm lg:text-lg leading-5'>We are an award-winning registered Non-profit organization that is designed to bridge the educational
           gap between the Northern and Southern parts of Ghana through Human Capacity Development,  Advocacy and Opportunity Creation.</Text>
         <div className='mt-8 flex gap-4'>
-          <Button radius="xl" size="lg" className='bg-secondary text-xs uppercase hover:bg-secondary'>
+          <Button onClick={() => setOpened(true)} radius="xl" size="lg" className='bg-secondary text-xs uppercase hover:bg-secondary'>
             Sponsor
           </Button>
           <Link href='/contact-us'>
@@ -26,6 +28,7 @@ function Jumbotron() {
       </div>
       <div className='w-[40vw] hidden lg:block' />
       <div className="absolute bg-hero-image bg-cover bg-center scale-x-[-1] w-[40vw] h-[80vh] rounded-tr-[245px] bottom-0 right-0 hidden lg:block"></div>
+      <SponsorshipModal opened={opened} onClose={() => setOpened(false)} />
     </div>
   )
 }
