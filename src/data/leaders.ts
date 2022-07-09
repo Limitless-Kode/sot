@@ -12,7 +12,7 @@ const leaders: Array<any> = [
   {
     name: "Daniel Bajaba",
     position: "Program Coordinator",
-    photo: "/assets/images/founder.jpg"
+    photo: "/assets/images/avatar.jpg"
   },
   {
     name: "Edwina Ansah-Owusu",
