@@ -133,13 +133,15 @@ const Home: NextPage = () => {
 								rural-urban migration and increased rates of fraudulent activities by young people.
 							</Text>
 							<div className="mt-8 flex gap-4">
-								<Button
-									radius="xl"
-									size="xl"
-									className="border-white text-xs uppercase hover:bg-primary"
-								>
-									Join Us Today
-								</Button>
+								<Link href='/contact-us'>
+									<Button
+										radius="xl"
+										size="xl"
+										className="border-white text-xs uppercase hover:bg-primary"
+									>
+										Join Us Today
+									</Button>
+								</Link>
 							</div>
 						</div>
 						<div className="lg:block hidden w-[40vw]" />
