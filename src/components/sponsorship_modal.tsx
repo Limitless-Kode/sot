@@ -42,7 +42,7 @@ function SponsorshipModal(props: IContactUsModal) {
     >
         <div className='flex items-center justify-start w-full min-h-[30vh]'>
           <div className='flex flex-col w-full h-[30vh]'>
-            <div className='p-8 bg-[#F58326] rounded-t-[15px]'>
+            <div className='p-6 bg-[#F58326] rounded-t-[15px]'>
               <h3 className='text-xl md:text-2xl font-bold text-white'>Make a Bank Transfer</h3>
             </div>
             <div className='flex gap-4 p-6 md:p-8'>
