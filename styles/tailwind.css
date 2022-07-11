@@ -638,56 +638,24 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 250px;
 }
 
-.h-\[70vh\] {
-  height: 70vh;
-}
-
 .h-auto {
   height: auto;
 }
 
-.h-\[100px\] {
-  height: 100px;
+.h-\[45vh\] {
+  height: 45vh;
 }
 
-.h-\[20vh\] {
-  height: 20vh;
-}
-
-.h-\[50px\] {
-  height: 50px;
-}
-
-.h-\[0px\] {
-  height: 0px;
-}
-
-.h-\[70px\] {
-  height: 70px;
-}
-
-.h-\[40px\] {
-  height: 40px;
-}
-
-.min-h-\[70vh\] {
-  min-height: 70vh;
+.min-h-\[30vh\] {
+  min-height: 30vh;
 }
 
 .min-h-\[100vh\] {
   min-height: 100vh;
 }
 
-.min-h-\[20vh\] {
-  min-height: 20vh;
-}
-
 .min-h-\[40vh\] {
   min-height: 40vh;
-}
-
-.min-h-\[30vh\] {
-  min-height: 30vh;
 }
 
 .w-\[100vw\] {
@@ -726,22 +694,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 100px;
 }
 
-.w-\[70vw\] {
-  width: 70vw;
-}
-
-.w-\[50px\] {
-  width: 50px;
-}
-
-.w-\[70px\] {
-  width: 70px;
-}
-
-.w-\[40px\] {
-  width: 40px;
-}
-
 .scale-x-\[-1\] {
   --tw-scale-x: -1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -757,10 +709,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .flex-wrap {
   flex-wrap: wrap;
-}
-
-.items-start {
-  align-items: flex-start;
 }
 
 .items-center {
@@ -826,18 +774,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .rounded-tr-\[245px\] {
   border-top-right-radius: 245px;
-}
-
-.rounded-tl-\[15px\] {
-  border-top-left-radius: 15px;
-}
-
-.rounded-bl-\[15px\] {
-  border-bottom-left-radius: 15px;
-}
-
-.rounded-tr-\[15px\] {
-  border-top-right-radius: 15px;
 }
 
 .border-0 {
@@ -929,16 +865,12 @@ Ensure the default browser behavior of the `hidden` attribute.
      object-fit: cover;
 }
 
-.p-12 {
-  padding: 3rem;
+.p-6 {
+  padding: 1.5rem;
 }
 
 .p-8 {
   padding: 2rem;
-}
-
-.p-6 {
-  padding: 1.5rem;
 }
 
 .py-16 {
@@ -1123,8 +1055,12 @@ a {
     height: 100%;
   }
 
-  .md\:h-\[100px\] {
-    height: 100px;
+  .md\:h-\[200px\] {
+    height: 200px;
+  }
+
+  .md\:h-\[160px\] {
+    height: 160px;
   }
 
   .md\:w-\[20vw\] {
@@ -1139,12 +1075,12 @@ a {
     width: 30vw;
   }
 
-  .md\:w-\[35vw\] {
-    width: 35vw;
+  .md\:w-\[200px\] {
+    width: 200px;
   }
 
-  .md\:w-\[100px\] {
-    width: 100px;
+  .md\:w-\[160px\] {
+    width: 160px;
   }
 
   .md\:flex-row {
@@ -1153,10 +1089,6 @@ a {
 
   .md\:justify-end {
     justify-content: flex-end;
-  }
-
-  .md\:p-12 {
-    padding: 3rem;
   }
 
   .md\:p-8 {
@@ -1171,6 +1103,11 @@ a {
   .md\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+
+  .md\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 

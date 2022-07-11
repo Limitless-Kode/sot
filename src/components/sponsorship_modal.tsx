@@ -35,20 +35,20 @@ function SponsorshipModal(props: IContactUsModal) {
       centered
       opened={opened}
       onClose={() => onClose()}
-      size='sm'
+      size='lg'
       withCloseButton={false}
       radius={15}
       padding={0}
     >
-        <div className='flex items-center justify-start w-full min-h-[30vh]'>
-          <div className='flex flex-col w-full h-[30vh]'>
+        <div className='flex items-center justify-center w-full '>
+          <div className='flex justify-center flex-col w-full'>
             <div className='p-6 bg-[#F58326] rounded-t-[15px]'>
               <h3 className='text-xl md:text-2xl font-bold text-white'>Make a Bank Transfer</h3>
             </div>
-            <div className='flex gap-4 p-6 md:p-8'>
-              <div className="cursor-pointer bg-fidelity h-[60px] w-[60px] md:h-[100px] md:w-[100px] bg-cover" />
-              <div className=''>
-                <p className='text-md'>Abraham Agoni</p>
+            <div className='flex items-center justify-start gap-4 p-6 md:p-8'>
+              <div className="cursor-pointer bg-fidelity h-[60px] w-[60px] md:h-[160px] md:w-[160px] bg-cover" />
+              <div className='text-lg md:text-xl'>
+                <p className=''>Abraham Agoni</p>
                 <div className='flex gap-6 items-center justify-start text-[#F58326]'>
                   <p className='text-black'> { isCopied ? 'Copied!' : '1400191801415'}</p>
                   {
