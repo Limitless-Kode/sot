@@ -1,10 +1,13 @@
 import React, {useEffect, useState} from 'react'
+import Link from 'next/link';
 import { Button, Text } from '@mantine/core';
 import { Navigation, Autoplay, Grid } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
 import IconButton from '../../src/components/icon_button'
 import Image  from 'next/image';
+import { SRLWrapper } from "simple-react-lightbox";
+
 
 import 'swiper/css';
 import "swiper/css/grid";
@@ -73,19 +76,23 @@ const Gallery = (props: IGallery) => {
               prevEl: '.gallery_prev'
             }}
           >
+            <SRLWrapper>
             {gallery?.map((images, index) => (
               <SwiperSlide key={index}>
                 <div className='flex flex-wrap gap-6 w-full h-auto'>
                   {
                     images.map((image, index) => (
                       <div className="relative w-[35vw] h-[35vw] lg:w-[18vw] lg:h-[18vw] xl:w-[15vw] xl:h-[15vw] rounded-xl oveflow-hidden" key={index}>
-                        <Image layout="fill" className='object-cover hover:scale-110 cursor-pointer ease-in-out duration-300 rounded-xl' src={image.photo} alt={image.name} />
+                        <a href={image.photo} data-attribute="SRL">
+                          <Image layout="fill" className='object-cover hover:scale-110 cursor-pointer ease-in-out duration-300 rounded-xl' src={image.photo} alt={image.name} />
+                        </a>
                       </div>
                     ))
                   }
                 </div>
               </SwiperSlide>
             ))}
+            </SRLWrapper>
           </Swiper>
         </div>
         <div className="text-white flex gap-4 items-center">
