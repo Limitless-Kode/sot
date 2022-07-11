@@ -14,7 +14,7 @@ import partners from '../src/data/partners';
 import SwiperCore, { Navigation, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import LeaderCard from '../src/components/leaders_card';
-import { FiArrowLeft, FiArrowRight, FiFacebook, FiTwitter, FiInstagram } from 'react-icons/fi';
+import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
 import Gallery from '../src/sections/gallery';
 
 // Import Swiper styles

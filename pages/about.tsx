@@ -53,7 +53,7 @@ const Home: NextPage = () => {
           <div className='mb-8'>
             <h2 className='text-2xl lg:text-4xl font-semibold mb-5 text-primary'>Vision</h2>
             <Text className='text-sm lg:text-lg leading-5'>
-              To be the hub for the formulation and implementation of activities geared towards the achievement of SDG 4, Quality Education first, 
+              To be the hub for the formulation and implementation of activities geared towards the achievement of Sustainable Development Goal 4, Quality Education first, 
               in Northern Ghana and then other deprived regions.  
             </Text>
           </div>
