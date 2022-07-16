@@ -54,7 +54,6 @@ const Gallery = (props: IGallery) => {
 
   return (
     <div id="gallery" className="flex items-center justify-center min-h-[100vh] w-[100vw] py-32">
-      {/* Image Preview Modal */}
       <Modal opened={showPreviewModal}
         onClose={() => setShowPreviewModal(false)}
         size={'70vw'}
