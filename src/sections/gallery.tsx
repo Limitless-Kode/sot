@@ -55,7 +55,7 @@ const Gallery = (props: IGallery) => {
     <div id="gallery" className="flex items-center justify-center min-h-[100vh] w-[100vw] py-32">
       <Modal opened={showPreviewModal}
         onClose={() => setShowPreviewModal(false)}
-        size={'70vw'}
+        size={'3xl'}
         radius={15}
         withCloseButton={false}
         padding={0}
