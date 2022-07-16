@@ -232,11 +232,6 @@ const Home: NextPage = () => {
 				<section>
 					<div className="relative w-[100vw] h-full py-32 bg-gradient-to-b from-primary to-secondary flex justify-center items-center">
 						<div className="w-[80vw] lg:w-[30vw] overflow-hidden text-white z-[2]">
-							{/* <h2 className="text-2xl lg:text-3xl font-semibold">Events</h2>
-							<Text className="text-sm lg:text-lg leading-5">
-								These groups, companies and organizations have played a major role in our journey so
-								far.
-							</Text> */}
 							<div className="mt-12 w-[80vw] lg:w-[30vw]">
 								<div>
 									<Swiper

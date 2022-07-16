@@ -1,13 +1,11 @@
-import React, {useEffect, useState} from 'react'
-import Link from 'next/link';
-import { Button, Text } from '@mantine/core';
+import React, {useEffect, useState, useCallback} from 'react'
+import { Modal, Text } from '@mantine/core';
 import { Navigation, Autoplay, Grid } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
+import { FiArrowLeft, FiArrowRight, FiX } from 'react-icons/fi';
 import IconButton from '../../src/components/icon_button'
 import Image  from 'next/image';
 import { SRLWrapper } from "simple-react-lightbox";
-
 
 import 'swiper/css';
 import "swiper/css/grid";
@@ -30,9 +28,11 @@ interface IGallery{
 const Gallery = (props: IGallery) => {
   const {grid, images} = props;
   const [gallery, setGallery] = useState<Array<Array<IImage>>>();
+  const [showPreviewModal, setShowPreviewModal] = useState<boolean>(false);
+  const [currentImage, setCurrentImage] = useState(null);
 
-  const groupImages = () => {
-    const number_of_images_per_grid = grid.rows * grid.columns; 
+  const groupImages = useCallback(() => {
+    const number_of_images_per_grid = grid.rows * grid.columns;
     if (images.length <= number_of_images_per_grid) {
       setGallery([images]);
       return;
@@ -42,17 +42,40 @@ const Gallery = (props: IGallery) => {
     const temp = gallery || [];
     for (let index = 1; index <= number_of_groups; index++) {
       const current_index = index == 1 ? 0 : number_of_images_per_grid * (index - 1);
-      temp.push(images.slice( (current_index), (number_of_images_per_grid * index)));
+      temp.push(images.slice((current_index), (number_of_images_per_grid * index)));
     }
     setGallery(temp);
-  }
+  }, [gallery, grid.columns, grid.rows, images]);
+
 
   useEffect(() => {
     groupImages()
-  },[])
+  },[groupImages])
 
   return (
     <div id="gallery" className="flex items-center justify-center min-h-[100vh] w-[100vw] py-32">
+      {/* Image Preview Modal */}
+      <Modal opened={showPreviewModal}
+        onClose={() => setShowPreviewModal(false)}
+        size={'70vw'}
+        radius={15}
+        withCloseButton={false}
+        padding={0}
+      >
+       <div className="relative w-[70vw] h-[80vh] rounded-xl">
+        {
+          currentImage !== null &&
+          <Image layout="fill"
+            className='object-cover bg-top ease-in-out duration-300 rounded-xl' 
+            src={currentImage.photo}
+            alt={currentImage.name} 
+            />
+          }
+          <div onClick={() => setShowPreviewModal(false)} className='flex items-center justify-center absolute right-5 top-5 bg-primary h-[45px] w-[45px] rounded-full'>
+            <FiX size={32} className="z-99 cursor-pointer text-white" />
+          </div>
+        </div>
+      </Modal>
       <div className="w-[80vw]">
         <div className='w-full lg:w-[30vw] mb-12'>
           <h2 className="text-2xl lg:text-3xl font-semibold mb-3">Have a look at what we created.</h2>
@@ -82,10 +105,14 @@ const Gallery = (props: IGallery) => {
                 <div className='flex flex-wrap gap-6 w-full h-auto'>
                   {
                     images.map((image, index) => (
-                      <div className="relative w-[35vw] h-[35vw] lg:w-[18vw] lg:h-[18vw] xl:w-[15vw] xl:h-[15vw] rounded-xl oveflow-hidden" key={index}>
-                        <a href={image.photo} data-attribute="SRL">
+                      <div
+                        onClick={() => {
+                          setShowPreviewModal(true);
+                          setCurrentImage(image);
+                        }}
+                        className="relative w-[35vw] h-[35vw] lg:w-[18vw] lg:h-[18vw] xl:w-[15vw] xl:h-[15vw] rounded-xl oveflow-hidden"
+                        key={index}>
                           <Image layout="fill" className='object-cover hover:scale-110 cursor-pointer ease-in-out duration-300 rounded-xl' src={image.photo} alt={image.name} />
-                        </a>
                       </div>
                     ))
                   }
