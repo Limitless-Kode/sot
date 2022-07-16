@@ -60,7 +60,7 @@ const Gallery = (props: IGallery) => {
         withCloseButton={false}
         padding={0}
       >
-       <div className="relative w-[70vw] h-[80vh] rounded-xl">
+       <div className="relative w-[90vw] md:w-[70vw] h-[80vh] rounded-xl">
         {
           currentImage !== null &&
           <Image layout="fill"
