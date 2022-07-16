@@ -5,7 +5,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { FiArrowLeft, FiArrowRight, FiX } from 'react-icons/fi';
 import IconButton from '../../src/components/icon_button'
 import Image  from 'next/image';
-import { SRLWrapper } from "simple-react-lightbox";
 
 import 'swiper/css';
 import "swiper/css/grid";
@@ -98,7 +97,6 @@ const Gallery = (props: IGallery) => {
               prevEl: '.gallery_prev'
             }}
           >
-            <SRLWrapper>
             {gallery?.map((images, index) => (
               <SwiperSlide key={index}>
                 <div className='flex flex-wrap gap-6 w-full h-auto'>
@@ -118,7 +116,6 @@ const Gallery = (props: IGallery) => {
                 </div>
               </SwiperSlide>
             ))}
-            </SRLWrapper>
           </Swiper>
         </div>
         <div className="text-white flex gap-4 items-center">
