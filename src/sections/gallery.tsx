@@ -29,7 +29,7 @@ const Gallery = (props: IGallery) => {
   const {grid, images} = props;
   const [gallery, setGallery] = useState<Array<Array<IImage>>>();
   const [showPreviewModal, setShowPreviewModal] = useState<boolean>(false);
-  const [currentImage, setCurrentImage] = useState(null);
+  const [currentImage, setCurrentImage] = useState<IImage|null>(null);
 
   const groupImages = useCallback(() => {
     const number_of_images_per_grid = grid.rows * grid.columns;

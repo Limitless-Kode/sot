@@ -512,10 +512,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   right: 1.25rem;
 }
 
-.right-\[0px\] {
-  right: 0px;
-}
-
 .z-\[2\] {
   z-index: 2;
 }
@@ -646,36 +642,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 90px;
 }
 
-.h-\[90vh\] {
-  height: 90vh;
+.h-\[60vw\] {
+  height: 60vw;
 }
 
 .h-auto {
   height: auto;
 }
 
-.max-h-\[80vh\] {
-  max-height: 80vh;
-}
-
 .min-h-\[100vh\] {
   min-height: 100vh;
-}
-
-.min-h-full {
-  min-height: 100%;
-}
-
-.min-h-\[100\%\] {
-  min-height: 100%;
-}
-
-.min-h-\[50vw\] {
-  min-height: 50vw;
-}
-
-.min-h-\[50vh\] {
-  min-height: 50vh;
 }
 
 .w-\[100vw\] {
@@ -718,8 +694,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 90px;
 }
 
-.w-\[70vw\] {
-  width: 70vw;
+.w-\[60vw\] {
+  width: 60vw;
 }
 
 .scale-x-\[-1\] {
@@ -886,11 +862,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .bg-top {
   background-position: top;
-}
-
-.object-contain {
-  -o-object-fit: contain;
-     object-fit: contain;
 }
 
 .object-cover {
